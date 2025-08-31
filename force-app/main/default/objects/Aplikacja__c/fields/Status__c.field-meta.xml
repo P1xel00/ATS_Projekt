@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Status aplikacji</description>
+    <inlineHelpText>Status aplikacji</inlineHelpText>
+    <label>Status</label>
+    <required>true</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Nowa</fullName>
+                <default>true</default>
+                <label>Nowa</label>
+            </value>
+            <value>
+                <fullName>W trakcie</fullName>
+                <default>false</default>
+                <label>W trakcie</label>
+            </value>
+            <value>
+                <fullName>Zakończona</fullName>
+                <default>false</default>
+                <label>Zakończona</label>
+            </value>
+            <value>
+                <fullName>Zatrudniony</fullName>
+                <default>false</default>
+                <label>Zatrudniony</label>
+            </value>
+            <value>
+                <fullName>Odrzucona</fullName>
+                <default>false</default>
+                <label>Odrzucona</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_zakonczenia_wieksza_rowna_data_rozp</fullName>
+    <active>true</active>
+    <description>Uniemożliwia ustawienie daty zakończenia wcześniej niż daty rozpoczęcia</description>
+    <errorConditionFormula>NOT(ISBLANK(Data_zakonczenia__c)) &amp;&amp; Data_zakonczenia__c &lt; Data_rozpoczecia__c</errorConditionFormula>
+    <errorMessage>Data zakończenia nie może być wcześniejsza niż data rozpoczęcia.</errorMessage>
+</ValidationRule>

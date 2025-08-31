@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lokalizacja__c</fullName>
+    <description>Lokalizacja oferty</description>
+    <inlineHelpText>Lokalizacja oferty</inlineHelpText>
+    <label>Lokalizacja</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Warszawa</fullName>
+                <default>false</default>
+                <label>Warszawa</label>
+            </value>
+            <value>
+                <fullName>Zdalna</fullName>
+                <default>false</default>
+                <label>Zdalna</label>
+            </value>
+            <value>
+                <fullName>Kraków</fullName>
+                <default>false</default>
+                <label>Kraków</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
