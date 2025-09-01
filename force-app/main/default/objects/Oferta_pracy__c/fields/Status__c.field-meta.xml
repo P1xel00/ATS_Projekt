@@ -5,7 +5,7 @@
     <inlineHelpText>Status oferty</inlineHelpText>
     <label>Status</label>
     <required>true</required>
-    <trackHistory>false</trackHistory>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>

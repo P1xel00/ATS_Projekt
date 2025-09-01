@@ -5,7 +5,7 @@
     <inlineHelpText>Źródło aplikacji</inlineHelpText>
     <label>Źródło aplikacji</label>
     <required>true</required>
-    <trackHistory>false</trackHistory>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>

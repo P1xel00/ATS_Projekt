@@ -5,7 +5,7 @@
     <inlineHelpText>Nazwa etapu</inlineHelpText>
     <label>Nazwa etapu</label>
     <required>true</required>
-    <trackHistory>false</trackHistory>
+    <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
