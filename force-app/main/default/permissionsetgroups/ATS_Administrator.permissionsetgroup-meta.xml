@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ATS_Administrator</label>
+    <permissionSets>ATS_Administrator_Permissions</permissionSets>
+    <permissionSets>ATS_Aplikacja_Create</permissionSets>
+    <permissionSets>ATS_Aplikacja_Delete</permissionSets>
+    <permissionSets>ATS_Aplikacja_Edit</permissionSets>
+    <permissionSets>ATS_Aplikacja_Read</permissionSets>
+    <permissionSets>ATS_App</permissionSets>
+    <permissionSets>ATS_Etap_Rekrutacji_Create</permissionSets>
+    <permissionSets>ATS_Etap_Rekrutacji_Delete</permissionSets>
+    <permissionSets>ATS_Etap_Rekrutacji_Edit</permissionSets>
+    <permissionSets>ATS_Etap_Rekrutacji_Read</permissionSets>
+    <permissionSets>ATS_Kandydat_Create</permissionSets>
+    <permissionSets>ATS_Kandydat_Delete</permissionSets>
+    <permissionSets>ATS_Kandydat_Edit</permissionSets>
+    <permissionSets>ATS_Kandydat_Read</permissionSets>
+    <permissionSets>ATS_Oferta_Pracy_Create</permissionSets>
+    <permissionSets>ATS_Oferta_Pracy_Delete</permissionSets>
+    <permissionSets>ATS_Oferta_Pracy_Edit</permissionSets>
+    <permissionSets>ATS_Oferta_Pracy_Read</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

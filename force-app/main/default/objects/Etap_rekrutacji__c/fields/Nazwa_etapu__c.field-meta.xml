@@ -4,7 +4,7 @@
     <description>Nazwa etapu</description>
     <inlineHelpText>Nazwa etapu</inlineHelpText>
     <label>Nazwa etapu</label>
-    <required>true</required>
+    <required>false</required>
     <trackHistory>true</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>

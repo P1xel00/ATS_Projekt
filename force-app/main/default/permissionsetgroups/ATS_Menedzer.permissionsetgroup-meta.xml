@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>ATS_Menedżer</label>
+    <mutingPermissionSets>ATS_Menedzer_Muted</mutingPermissionSets>
+    <permissionSets>ATS_Aplikacja_Edit</permissionSets>
+    <permissionSets>ATS_App</permissionSets>
+    <permissionSets>ATS_Etap_Rekrutacji_Edit</permissionSets>
+    <permissionSets>ATS_Kandydat_Read</permissionSets>
+    <permissionSets>ATS_Oferta_Pracy_Edit</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>
