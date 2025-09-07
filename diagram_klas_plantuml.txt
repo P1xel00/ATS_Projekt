@@ -1,0 +1,55 @@
+@startuml
+title Diagram klas systemu ATS
+
+class Kandydat {
+  +Imię: Text(50)
+  +Nazwisko: Text(100)
+  +Email: Email
+  +Telefon: Phone
+  +Doświadczenie: TextArea(1000)
+  +Umiejętności: Multi-select Picklist
+}
+
+class OfertaPracy {
+  +Tytuł: Text(80)
+  +Dział: Picklist
+  +Lokalizacja: Picklist
+  +Data publikacji: Date
+  +Status: Picklist
+  +Opis: Text Area(2000)
+  +Menedżer rekrutujący: Lookup (User)
+  +Czas rekrutacji: Number
+}
+
+class Aplikacja {
+  +Data Zgłoszenia: Date
+  +Status: Picklist
+  +Ocena: Picklist
+  +Kandydat: Lookup
+  +Oferta Pracy: Master-Detail
+  +Źródło aplikacji: Picklist
+}
+
+class EtapRekrutacji {
+  +Nazwa etapu: Picklist
+  +Data Rozpoczęcia: Date
+  +Data Zakończenia: Date
+  +Komentarz: TextArea(2000)
+  +Aplikacja: Master-Detail
+  +Czas trwania etapu: Formula (Number)
+}
+
+class ContentDocument {
+  +Title: Text
+  +FileType: Text
+  +CreatedDate: Datetime
+}
+
+' Relacje
+Kandydat "1" --> "0..*" Aplikacja : Lookup
+OfertaPracy "1" --> "0..*" Aplikacja : Master-Detail
+Aplikacja "1" --> "0..*" EtapRekrutacji : Master-Detail
+Aplikacja "1" --> "0..*" ContentDocument : ContentDocumentLink
+Kandydat "1" --> "0..*" ContentDocument : ContentDocumentLink
+
+@enduml

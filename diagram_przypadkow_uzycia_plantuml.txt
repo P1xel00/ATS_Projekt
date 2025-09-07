@@ -1,0 +1,51 @@
+@startuml
+title Diagram przypadków użycia systemu ATS
+left to right direction
+
+actor "Specjalista HR" as HR
+actor "Menedżer liniowy" as MGR
+actor "Zewnętrzne systemy" as EXT
+
+rectangle "ATS" {
+  usecase "Tworzenie i zarządzanie ofert pracy" as UC_JOBS
+  usecase "Obsługa aplikacji kandydatów" as UC_APPS
+  usecase "Zarządzanie etapami rekrutacji" as UC_STAGES
+  usecase "Wyszukiwanie i filtrowanie kandydatów" as UC_SEARCH
+  usecase "Wyrażanie opinii (feedback)" as UC_FEEDBACK
+  usecase "Raporty i KPI" as UC_REPORTS
+  usecase "Integracje z systemami zewnętrznymi <<future work>>" as UC_INTEGR
+}
+
+' uprawnienia
+HR  --> UC_JOBS
+HR  --> UC_APPS
+HR  --> UC_STAGES
+HR  --> UC_SEARCH
+HR  --> UC_REPORTS
+HR  --> UC_INTEGR
+
+MGR --> UC_STAGES
+MGR --> UC_FEEDBACK
+MGR --> UC_SEARCH
+MGR --> UC_REPORTS
+
+' integracje
+EXT -- UC_INTEGR
+
+' przykładowe NFR jako notatki do kluczowych UC (oszczędnie)
+note right of UC_REPORTS
+  NFR: dostępność (SLA ≥ 99.5%),
+  skalowalność raportów
+end note
+
+note right of UC_APPS
+  NFR: bezpieczeństwo/RODO,
+  kontrola dostępu i szyfrowanie
+end note
+
+note right of UC_SEARCH
+  NFR: wydajność i skalowalność
+  dla dużych zbiorów danych
+end note
+
+@enduml
