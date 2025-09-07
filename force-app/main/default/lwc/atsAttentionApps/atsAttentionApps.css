@@ -1,0 +1,4 @@
+.table-wrap--scroll {
+  height: 420px;
+  overflow-y: auto; 
+}
