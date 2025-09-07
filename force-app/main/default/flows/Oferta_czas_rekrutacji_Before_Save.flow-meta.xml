@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_DaysDiffSafe_to_Czas_rekrutacji_c</name>
+        <label>Assign DaysDiffSafe to Czas_rekrutacji__c</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Czas_rekrutacji__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>DaysDiffSafe</elementReference>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <environments>Default</environments>
+    <formulas>
+        <name>DaysDiff</name>
+        <dataType>Number</dataType>
+        <expression>$Flow.CurrentDate - {!$Record.Data_publikacji__c}</expression>
+        <scale>0</scale>
+    </formulas>
+    <formulas>
+        <name>DaysDiffSafe</name>
+        <dataType>Number</dataType>
+        <expression>IF( {!DaysDiff} &lt; 0, 0, {!DaysDiff} )</expression>
+        <scale>0</scale>
+    </formulas>
+    <interviewLabel>Oferta – czas rekrutacji (Before Save) {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Oferta – czas rekrutacji (Before Save)</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assign_DaysDiffSafe_to_Czas_rekrutacji_c</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Status__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Zamknięta</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Data_publikacji__c</field>
+            <operator>IsNull</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Oferta_pracy__c</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
