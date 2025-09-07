@@ -92,7 +92,6 @@ export default class atsAttentionApps extends LightningElement {
     resetPagination() {
         this.rows = [];
         this.nextIndex = 0;
-        // Załaduj pierwszą porcję
         const first = this.allRows.slice(0, this.chunkSize);
         this.rows = first;
         this.nextIndex = first.length;

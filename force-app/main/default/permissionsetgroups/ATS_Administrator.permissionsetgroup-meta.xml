@@ -2,7 +2,6 @@
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
     <hasActivationRequired>false</hasActivationRequired>
     <label>ATS_Administrator</label>
-    <permissionSets>ATS_Administrator_Permissions</permissionSets>
     <permissionSets>ATS_Aplikacja_Create</permissionSets>
     <permissionSets>ATS_Aplikacja_Delete</permissionSets>
     <permissionSets>ATS_Aplikacja_Edit</permissionSets>
